@@ -15,7 +15,7 @@ public class Geometry {
 
 
         Triangle.printTriangleArea(4,7,8);
-
+        Triangle.printTriangleSquare(4,7,8);
 
     }
 
