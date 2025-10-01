@@ -14,4 +14,13 @@ public class TriangleTests {
         Assertions.assertEquals(12.0, result);
     }
 
+
+    @Test
+
+    void cacCalculateTriangleSquare ()
+    {
+        var t = new Triangle(5.0, 4.0,3.0);
+        double result = t.square();
+        Assertions.assertEquals(6.0, result);
+    }
 }

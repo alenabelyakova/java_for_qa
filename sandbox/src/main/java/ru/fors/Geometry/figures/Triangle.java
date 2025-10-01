@@ -32,5 +32,8 @@ public record Triangle (double a, double b, double c)
     public double area() {
     return  this.a + this.b + this.c;
     }
+
+    public double square() {
+    return sqrt (((a+b+c)/2)* (((a+b+c)/2)-a) *  (((a+b+c)/2)-b) * (((a+b+c)/2)-c));}
 }
 
