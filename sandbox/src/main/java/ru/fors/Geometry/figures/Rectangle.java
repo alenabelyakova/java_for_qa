@@ -1,6 +1,8 @@
 package ru.fors.Geometry.figures;
 
-public class Rectangle {
+public record Rectangle (double a, double b)
+{
+
     public static void printRectangleArea(double a, double b) {
 
         var text = String.format("Площадь прямоугольника со сторонами %f и %f = %f",a,b,RectangleArea(a,b));
