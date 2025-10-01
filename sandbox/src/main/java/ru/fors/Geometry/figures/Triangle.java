@@ -24,5 +24,13 @@ public record Triangle (double a, double b, double c)
     private static double TriangleS(double a, double b, double c) {
         return sqrt (((a+b+c)/2)* (((a+b+c)/2)-a) *  (((a+b+c)/2)-b) * (((a+b+c)/2)-c));
     }
+
+    public double perim() {
+        return a + b + c;
     }
+
+    public double area() {
+    return  this.a + this.b + this.c;
+    }
+}
 
