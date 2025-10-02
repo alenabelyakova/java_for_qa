@@ -2,6 +2,11 @@ package ru.fors.Geometry.figures;
 
 public record Rectangle (double a, double b)
 {
+public  Rectangle {
+    if (a < 0 || b<0 ) {
+        throw new IllegalArgumentException("Rectagle side should be non-negative");
+    }
+}
 
     public static void printRectangleArea(double a, double b) {
 

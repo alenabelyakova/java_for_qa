@@ -4,8 +4,19 @@ import static java.lang.Math.sqrt;
 
 public record Triangle (double a, double b, double c)
 
-
 {
+
+    public  Triangle {
+        if (a < 0 || b<0 || c<0) {
+            throw new IllegalArgumentException("Triangle side should be non-negative");
+        }
+        if (a+b<c) {
+            throw new IllegalArgumentException("Triangle sides should be write");
+        }
+
+    }
+
+
     public static void printTriangleArea(double a, double b, double c) {
 
         var text = String.format("Периметр треугольника со сторонами %f и %f и %f = %f", a, b, c, TriangleP(a, b, c));

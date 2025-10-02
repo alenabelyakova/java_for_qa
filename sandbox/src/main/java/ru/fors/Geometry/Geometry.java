@@ -11,11 +11,11 @@ public class Geometry {
         Square.printSquareArea (new Square(5.0));
         Square.printSquareArea (new Square(3.0));
 
-        Rectangle.printRectangleArea (3.0, 5.0);
+        Rectangle.printRectangleArea (-3.0, 5.0);
 
 
-        Triangle.printTriangleArea(3,4,5);
-        Triangle.printTriangleSquare(3,4,5);
+        Triangle.printTriangleArea(3,-4,5);
+        Triangle.printTriangleSquare(3,-4,5);
 
     }
 
