@@ -1,8 +1,24 @@
 package ru.fors.Geometry.figures;
 
+import java.util.Objects;
+
 public record Rectangle (double a, double b)
 {
-public  Rectangle {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Rectangle rectangle = (Rectangle) o;
+        return (Double.compare(this.a, rectangle.a) == 0 && Double.compare(this.b, rectangle.b) == 0)
+                || (Double.compare(this.b, rectangle.a) == 0 && Double.compare(this.a, rectangle.b) == 0);
+    }
+
+    @Override
+    public int hashCode() {
+        return 1;
+    }
+
+    public  Rectangle {
     if (a < 0 || b<0 ) {
         throw new IllegalArgumentException("Rectagle side should be non-negative");
     }
